@@ -5,6 +5,7 @@ import {
   FaTwitter,
   FaWhatsapp,
   FaTelegram,
+  FaYoutube,
 } from "react-icons/fa";
 // type _Link = {
 //   href: string;
@@ -34,15 +35,34 @@ export default function Info() {
         />
         <div className="mx-2 flex-1   flex flex-col justify-end ">
           <div className="flex flex-col justify-between border-r-2 border-r-success    gap-y-1   pr-2 mr-1 mb-2">
-            <p className="text-sm md:text-md lg:text-lg">
+            <p className="text-sm md:text-lg lg:text-lg">
               نحو علمٍ متميزٍ رصين
             </p>
-            <div className="flex flex-row gap-x-4 mt-2">
-              <FaFacebook className="hover:text-info size-4 md:size-5 cursor-pointer" />
-              <FaInstagram className="hover:text-info size-4  md:size-5 cursor-pointer" />
-              <FaTwitter className="hover:text-info size-4 md:size-5 cursor-pointer" />
-              <FaWhatsapp className="hover:text-info size-4 md:size-5 cursor-pointer" />
-              <FaTelegram className="hover:text-info size-4 md:size-5 cursor-pointer" />
+            <div className="flex flex-row gap-x-2 mt-2">
+              <a
+                href="https://www.facebook.com/profile.php?id=61565416586068&mibextid=LQQJ4d"
+                target="_blank"
+              >
+                <FaFacebook className="hover:text-info size-4 md:size-5 cursor-pointer" />
+              </a>
+              <a href="" target="_blank">
+                <FaInstagram className="hover:text-info size-4  md:size-5 cursor-pointer" />
+              </a>
+              <a href="https://youtube.com/@islamic_u1446?si=OAX-MtlGi68bC31o">
+                <FaYoutube className="hover:text-info size-4  md:size-5 cursor-pointer" />
+              </a>
+              <a
+                href="https://x.com/iuis_1446?t=c-oKvqP5u5tKeoDJrdt5OQ&s=09"
+                target="_blank"
+              >
+                <FaTwitter className="hover:text-info size-4 md:size-5 cursor-pointer" />
+              </a>
+              <a href="" target="_blank">
+                <FaWhatsapp className="hover:text-info size-4 md:size-5 cursor-pointer" />
+              </a>
+              <a href="https://t.me/iuis_1446" target="_blank">
+                <FaTelegram className="hover:text-info size-4 md:size-5 cursor-pointer" />
+              </a>
             </div>
           </div>
         </div>
