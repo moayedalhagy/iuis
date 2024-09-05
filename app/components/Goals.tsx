@@ -31,12 +31,12 @@ export default function Goals() {
         <div className="flex flex-col gap-y-10 justify-center items-center mt-3   py-10  ">
           {/* my Vision */}
           <div className="w-full md:w-[85%] lg:w-[75%]">
-            <p className="text-success font-semibold text-xl mb-3">الرؤية:</p>
+            <p className="text-success font-semibold text-xl mb-3">رؤيتنا:</p>
             <BorderdTextBox text={OneGoalsSection} icon_src={null} />
           </div>
           {/* my message */}
           <div className="w-full md:w-[85%] lg:w-[75%]">
-            <p className="text-success font-semibold text-xl mb-3">الرسالة:</p>
+            <p className="text-success font-semibold text-xl mb-3">رسالتنا:</p>
             <BorderdTextBox text={TwoGoalsSection} icon_src={null} />
           </div>
         </div>
@@ -45,7 +45,7 @@ export default function Goals() {
       {/* goals  */}
       <div className="flex flex-col gap-y-10 justify-center items-center mt-3   py-10   px-5 md:px-12">
         <div className="w-full md:w-[85%] lg:w-[75%]   ">
-          <p className="text-success font-semibold text-xl mb-3">الأهداف:</p>
+          <p className="text-success font-semibold text-xl mb-3">أهدافنا:</p>
         </div>
       </div>
       <div className="flex flex-col lg:flex-row justify-start   ">
