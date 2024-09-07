@@ -1,8 +1,8 @@
-import Hero from "./components/Hero";
-import Intro from "./components/Intro";
-import Goals from "./components/Goals";
-import Video from "./components/Video";
-import Signin from "./components/Signin";
+import Hero from "./components/Sections/Hero";
+import Intro from "./components/Sections/Intro";
+import Goals from "./components/Sections/Goals";
+import Video from "./components/Sections/Video";
+import Signin from "./components/Sections/Signin";
 
 export default function Home() {
   return (

@@ -1,5 +1,3 @@
-import { text } from "stream/consumers";
-
 //  <br className="hidden md:block" />
 
 export const IdentityIntroSection:string = `

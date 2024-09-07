@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 import { Alexandria } from "next/font/google";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/Sections/Header";
+import Footer from "./components/Sections/Footer";
 import "../styles/globals.css";
 
 const alexandria = Alexandria({
@@ -22,9 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={`${alexandria.className}   bg-gray`}>
+      <body className={`${alexandria.className} bg-gray`}>
         <Header />
-
         {children}
         <Footer />
       </body>

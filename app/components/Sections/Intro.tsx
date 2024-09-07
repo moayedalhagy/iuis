@@ -1,6 +1,6 @@
-import { IdentityIntroSection } from "../texts";
-import BorderdTextBox from "./BorderdTextBox";
-import SectionTitle from "./SectionTitle";
+import { IdentityIntroSection } from "../../texts";
+import BorderdTextBox from "../BorderdTextBox";
+import SectionTitle from "../SectionTitle";
 import Image from "next/image";
 export default function Intro() {
   return (

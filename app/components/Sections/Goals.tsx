@@ -1,8 +1,12 @@
 import Image from "next/image";
-import SectionTitle from "./SectionTitle";
-import BorderdTextBox from "./BorderdTextBox";
-import { OneGoalsSection, TwoGoalsSection, ListGoalsSection } from "../texts";
-import GoalLine from "./GoalLine";
+import SectionTitle from "../SectionTitle";
+import BorderdTextBox from "../BorderdTextBox";
+import {
+  OneGoalsSection,
+  TwoGoalsSection,
+  ListGoalsSection,
+} from "../../texts";
+import GoalLine from "../GoalLine";
 
 export default function Goals() {
   const padding = "px-5 md:px-12";

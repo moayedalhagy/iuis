@@ -1,4 +1,4 @@
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../SectionTitle";
 export default function Video() {
   return (
     <div className="bg-white mt-6 px-5 md:px-12">
