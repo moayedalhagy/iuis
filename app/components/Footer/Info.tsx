@@ -35,8 +35,13 @@ export default function Info() {
         />
         <div className="mx-2 flex-1   flex flex-col justify-end ">
           <div className="flex flex-col justify-between border-r-2 border-r-success    gap-y-1   pr-2 mr-1 mb-2">
-            <p className="text-sm md:text-lg lg:text-lg">
-              نحو علمٍ متميزٍ رصين
+            <p className=" text-sm md:text-lg lg:text-lg   pl-10 w-auto">
+              <span className="inline-block md:hidden">
+                نحو علـمٍ متميـزٍ رصيـن
+              </span>
+              <span className="hidden md:inline-block">
+                نحو علمٍ متميزٍ رصين
+              </span>
             </p>
             <div className="flex flex-row gap-x-2 mt-2">
               <a

@@ -19,7 +19,7 @@ export default function Footer() {
       </div>
 
       <p className="text-sm text-center bg-info text-white h-16 flex flex-row justify-center items-center">
-        جميع الحقوق محفوظة للجامعة الإسلامية الخاصة &copy; 2024
+        جميع الحقوق محفوظة للجامعة الإسلامية في سوريا &copy; 2024
       </p>
     </footer>
   );
