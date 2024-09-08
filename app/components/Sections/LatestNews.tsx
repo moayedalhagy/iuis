@@ -1,6 +1,7 @@
 import { NewsCardType } from "@/app/_types/NewsCardType";
 import SectionTitle from "../SectionTitle";
 import NewsCard from "../Segments/NewsCard";
+import GradientButton from "../GradientButton";
 
 const TempString: string = `            في رحاب الإيمان، تنمو الأرواح وتسمو القلوب بالتقوى والصلاح. نستنير
             بنور الهداية من كتاب الله وسنة نبيه الكريم، نسعى للخير ونغرس بذور
@@ -55,6 +56,9 @@ export default function LatestNews() {
             </div>
           );
         })}
+      </div>
+      <div className="mt-3 flex flex-row justify-center py-2">
+        <GradientButton text="المزيد من الأخبار" />
       </div>
     </div>
   );

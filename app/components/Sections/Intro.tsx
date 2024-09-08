@@ -1,5 +1,6 @@
 import { IdentityIntroSection } from "../../texts";
 import BorderdTextBox from "../BorderdTextBox";
+import GradientButton from "../GradientButton";
 import SectionTitle from "../SectionTitle";
 import Image from "next/image";
 export default function Intro() {
@@ -38,6 +39,10 @@ export default function Intro() {
           height={"150"}
           alt="logo"
         />
+      </div>
+
+      <div className="mt-3 flex flex-row justify-center py-2">
+        <GradientButton text="المزيد عن الجامعة" />
       </div>
     </div>
   );
