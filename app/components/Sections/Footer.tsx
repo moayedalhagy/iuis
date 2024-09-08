@@ -8,17 +8,17 @@ export default function Footer() {
     ssr: false,
   });
   return (
-    <footer className="bg-primary ">
-      <div className="flex flex-col md:flex-row px-5 py-2 gap-y-5 gap-x-5">
-        <div className="flex-1  ">
+    <footer className="bg-primary">
+      <div className="flex flex-col gap-x-5 gap-y-5 px-5 py-2 md:flex-row">
+        <div className="flex-1">
           <Info />
         </div>
-        <div className="md:w-1/2    h-[180px] bg-red-500 my-2">
+        <div className="my-2 h-[180px] bg-red-500 md:w-1/2">
           <Map />
         </div>
       </div>
 
-      <p className="text-sm text-center bg-info text-white h-16 flex flex-row justify-center items-center">
+      <p className="flex h-16 flex-row items-center justify-center bg-info text-center text-sm text-white">
         جميع الحقوق محفوظة للجامعة الإسلامية في سوريا &copy; 2024
       </p>
     </footer>

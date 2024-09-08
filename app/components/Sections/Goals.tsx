@@ -11,18 +11,18 @@ import GoalLine from "../GoalLine";
 export default function Goals() {
   const padding = "px-5 md:px-12";
   return (
-    <div className={`bg-[#F5F5F5] mt-6 pt-5   `}>
+    <div className={`mt-6 bg-[#F5F5F5] pt-7`}>
       {/* title  */}
       <div className={` ${padding}`}>
         <SectionTitle text={"هوية الجامعة الإسلامية"} />
 
-        <div className="mt-3 md:mt-4 flex flex-col md:flex-row justify-between  md:gap-y-0  ">
-          <p className="text-justify  text-sm md:text-lg  opacity-60 leading-8">
+        <div className="mt-3 flex flex-col justify-between md:mt-4 md:flex-row md:gap-y-0">
+          <p className="text-justify text-sm leading-8 opacity-60 md:text-lg">
             تتطلع الجامعة الإسلامية إلى تحقيق رؤيا ورسالة طموحة نوجز ملامحها
             الأساسية في الآتي:
           </p>
 
-          <div className="self-end  lg:ml-40 mt-6">
+          <div className="mt-6 self-end lg:ml-40">
             <Image
               src={"/images/stars-up.svg"}
               width={"150"}
@@ -32,27 +32,27 @@ export default function Goals() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-y-10 justify-center items-center mt-3   py-10  ">
+        <div className="mt-3 flex flex-col items-center justify-center gap-y-10 py-10">
           {/* my Vision */}
           <div className="w-full md:w-[85%] lg:w-[75%]">
-            <p className="text-success font-semibold text-xl mb-3">رؤيتنا:</p>
+            <p className="mb-3 text-xl font-semibold text-success">رؤيتنا:</p>
             <BorderdTextBox text={OneGoalsSection} icon_src={null} />
           </div>
           {/* my message */}
           <div className="w-full md:w-[85%] lg:w-[75%]">
-            <p className="text-success font-semibold text-xl mb-3">رسالتنا:</p>
+            <p className="mb-3 text-xl font-semibold text-success">رسالتنا:</p>
             <BorderdTextBox text={TwoGoalsSection} icon_src={null} />
           </div>
         </div>
       </div>{" "}
       {/* end padding */}
       {/* goals  */}
-      <div className="flex flex-col gap-y-10 justify-center items-center mt-3   py-10   px-5 md:px-12">
-        <div className="w-full md:w-[85%] lg:w-[75%]   ">
-          <p className="text-success font-semibold text-xl mb-3">أهدافنا:</p>
+      <div className="mt-3 flex flex-col items-center justify-center gap-y-10 px-5 py-10 md:px-12">
+        <div className="w-full md:w-[85%] lg:w-[75%]">
+          <p className="mb-3 text-xl font-semibold text-success">أهدافنا:</p>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-start   ">
+      <div className="flex flex-col justify-start lg:flex-row">
         <div className=" ">
           <Image
             src={"/images/goals_logo.svg"}
@@ -62,21 +62,21 @@ export default function Goals() {
           />
         </div>
 
-        <div className=" flex-1 py-2 flex flex-col justify-evenly lg:px-2 gap-y-5   lg:gap-y-0   ">
+        <div className="flex flex-1 flex-col justify-evenly gap-y-5 py-2 lg:gap-y-0 lg:px-2">
           {ListGoalsSection.map((item, idx) => {
             return (
               <GoalLine
                 key={idx}
                 text={item.text}
                 img={`/images/id-bg/${idx + 1}.svg`}
-                className="md:my-2 w-full md:w-[80%]   "
+                className="w-full md:my-2 md:w-[80%]"
               />
             );
           })}
         </div>
       </div>
       {/* end goals  */}
-      <div className="hidden self-end  lg:mr-40 my-3">
+      <div className="my-3 hidden self-end lg:mr-40">
         <Image
           src={"/images/stars-down.svg"}
           width={"150"}

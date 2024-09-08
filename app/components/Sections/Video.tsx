@@ -1,11 +1,11 @@
 import SectionTitle from "../SectionTitle";
 export default function Video() {
   return (
-    <div className="bg-white mt-6 px-5 md:px-12">
+    <div className="mt-6 bg-white px-5 pt-7 md:px-12">
       {/* title  */}
       <SectionTitle text={"الفيديو التعريفي"} />
-      <div className="mt-5 flex flex-row justify-center items-center gap-y-5  lg:px-20">
-        <div className="flex-1 rounded-lg  my-2  overflow-hidden flex flex-row justify-center">
+      <div className="mt-5 flex flex-row items-center justify-center gap-y-5 lg:px-20">
+        <div className="my-2 flex flex-1 flex-row justify-center overflow-hidden rounded-lg">
           <iframe
             className="rounded-xl border-0 outline-0"
             width="853"

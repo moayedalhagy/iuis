@@ -3,24 +3,24 @@ import SectionTitle from "../SectionTitle";
 
 export default function Signin() {
   return (
-    <div className="bg-[#F5F5F5] mt-6 pt-5  px-5 md:px-12">
+    <div className="mt-6 bg-[#F5F5F5] px-5 pt-7 md:px-12">
       {/* title  */}
 
       <SectionTitle text={"التسجيل في الجامعة"} />
 
-      <div className="mt-3 md:mt-4 flex flex-col md:flex-row justify-between gap-y-4 md:gap-y-0 ">
-        <div className="flex-1 flex flex-col   gap-y-10">
-          <div className="  text-justify  text-md lg:text-2xl  opacity-60 leading-8">
-            <div className="mt-5 "></div>
+      <div className="mt-3 flex flex-col justify-between gap-y-4 md:mt-4 md:flex-row md:gap-y-0">
+        <div className="flex flex-1 flex-col gap-y-10">
+          <div className="text-md text-justify leading-8 opacity-60 lg:text-2xl">
+            <div className="mt-5"></div>
             فتح التسجيل لعام 2024-2025
             <div className="mt-3"></div>
-            <span className="font-semibold opacity-80 ">
+            <span className="font-semibold opacity-80">
               سارع بحجز مقعدك في الجامعة الإسلامية
             </span>
           </div>
 
-          <div className=" md:my-6 lg:my-auto   flex flex-row justify-center ">
-            <button className="w-[200px] lg:ml-[10%] lg:self-end text-xs md:text-lg lg:text-2xl  text-white  bg-gradient-to-r from-[#137DA4] to-[#03A579] py-2 px-4 rounded-xl  shadow-[0_2px_10px_0_#147CA6]">
+          <div className="flex flex-row justify-center md:my-6 lg:my-auto">
+            <button className="w-[200px] rounded-xl bg-gradient-to-r from-[#137DA4] to-[#03A579] px-4 py-2 text-xs text-white shadow-[0_2px_10px_0_#147CA6] md:text-lg lg:ml-[10%] lg:self-end lg:text-2xl">
               قريباً
             </button>
           </div>
