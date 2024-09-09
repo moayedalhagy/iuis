@@ -57,8 +57,8 @@ const Header = () => {
           </div>
           {/* end Brand  */}
           <div className=" ">
-            <button className="text-md w-[100px]  text-white sign_btn_gradient py-2 px-4 rounded-xl  shadow-[0_2px_10px_0_#147CA6]">
-              قريباً
+            <button className="text-md text-nowrap  w-auto  text-white sign_btn_gradient py-2 px-4 rounded-xl  shadow-[0_2px_10px_0_#147CA6]">
+              اضغط للتسجيل
             </button>
           </div>
         </div>

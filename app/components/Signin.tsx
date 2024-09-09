@@ -21,7 +21,7 @@ export default function Signin() {
 
           <div className=" md:my-6 lg:my-auto   flex flex-row justify-center ">
             <button className="w-[200px] lg:ml-[10%] lg:self-end text-xs md:text-lg lg:text-2xl  text-white  bg-gradient-to-r from-[#137DA4] to-[#03A579] py-2 px-4 rounded-xl  shadow-[0_2px_10px_0_#147CA6]">
-              قريباً
+              اضغط للتسجيل
             </button>
           </div>
         </div>

@@ -3,7 +3,7 @@ export default function Video() {
   return (
     <div className="bg-white mt-6 px-5 md:px-12">
       {/* title  */}
-      <SectionTitle text={"الفيديو التعريفي"} />
+      <SectionTitle text={"مقدمة عن الجامعة الإسلامية"} />
       <div className="mt-5 flex flex-row justify-center items-center gap-y-5  lg:px-20">
         <div className="flex-1 rounded-lg  my-2  overflow-hidden flex flex-row justify-center">
           <iframe
