@@ -19,7 +19,7 @@ export default function Hero() {
       </div>
       <p className="mt-6 text-lg md:text-xl ">
         صرح علمي يجمع تخصصات فريـدة
-        <span className="my-3  block">في بيئة معرفيـة متطورة</span>
+        <span className="my-3  block">ضمن بيئة معرفيـة متطورة</span>
       </p>
       <div className="my-8">
         <Image
