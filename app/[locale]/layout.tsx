@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { getLangDir } from "rtl-detect";
+import { getLocale } from "next-intl/server";
 import { Alexandria } from "next/font/google";
 import Header from "../components/Sections/Header";
 import Footer from "../components/Sections/Footer";
@@ -15,13 +17,16 @@ export const metadata: Metadata = {
   description: "الجامعة الإسلامية في سوريا",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const direction = getLangDir(locale);
+
   return (
-    <html lang="ar" dir="rtl">
+    <html lang={locale} dir={direction}>
       <body className={`${alexandria.className} bg-gray`}>
         <Header />
         {children}
