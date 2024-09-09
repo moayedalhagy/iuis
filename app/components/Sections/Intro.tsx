@@ -1,4 +1,4 @@
-import { IdentityIntroSection } from "../../texts";
+import { IdentityIntroSection } from "../../[locale]/texts";
 import BorderdTextBox from "../BorderdTextBox";
 import GradientButton from "../GradientButton";
 import SectionTitle from "../SectionTitle";

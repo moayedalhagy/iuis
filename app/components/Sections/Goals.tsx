@@ -5,7 +5,7 @@ import {
   OneGoalsSection,
   TwoGoalsSection,
   ListGoalsSection,
-} from "../../texts";
+} from "../../[locale]/texts";
 import GoalLine from "../GoalLine";
 
 export default function Goals() {
