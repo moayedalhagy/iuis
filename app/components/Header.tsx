@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { toast } from "react-toastify";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -57,7 +57,7 @@ const Header = () => {
           </div>
           {/* end Brand  */}
           <div className=" ">
-            <button className="text-md text-nowrap  w-auto  text-white sign_btn_gradient py-2 px-4 rounded-xl  shadow-[0_2px_10px_0_#147CA6]">
+            <button onClick={()=>toast.error("التسجيل غير متاح حالياً")} className="text-md text-nowrap  w-auto  text-white sign_btn_gradient py-2 px-4 rounded-xl  shadow-[0_2px_10px_0_#147CA6]">
               اضغط للتسجيل
             </button>
           </div>

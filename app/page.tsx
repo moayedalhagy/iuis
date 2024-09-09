@@ -12,9 +12,7 @@ export default function Home() {
       <Intro />
       <Goals />
       <Video />
-      <div className="mt-20 bg-red-600">
-        <IdFile />
-      </div>
+      <IdFile />
       <Signin />
     </main>
   );
