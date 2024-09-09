@@ -2,6 +2,9 @@
 import Image from "next/image";
 import SectionTitle from "./SectionTitle";
 import { useState, useEffect } from "react";
+import GradientButton from "./GradientButton";
+import { redirect } from "next/dist/server/api-utils";
+import Link from "next/link";
 
 export default function IdFile() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -26,9 +29,19 @@ export default function IdFile() {
     setActiveIndex((current) => (current + 1) % items.length);
   };
   return (
-    <div className="bg-white mt-6 px-5 md:px-12 h-[560px] sm:h-[980px] overflow-hidden">
+    <div className="bg-[#F5F5F5] pt-5 mt-6 px-5 md:px-12 h-[560px] sm:h-[980px] overflow-hidden">
       {/* title  */}
-      <SectionTitle text={"الملف التعريفي"} />
+      <div className="flex flex-row   justify-start  sm:justify-between  overflow-hidden gap-x-2">
+        <div className=" ">
+          <SectionTitle text={"الملف التعريفي"} />
+        </div>
+
+        <div className="self-baseline max-w-1/12">
+          <Link href={"/images/id_file_images/id_file.pdf"} className="text-sm">
+            <GradientButton text="اضغط للتحميل" />
+          </Link>
+        </div>
+      </div>
       <div className="  flex flex-row justify-center items-center h-full pt-6 ">
         <div
           id="controls-carousel"

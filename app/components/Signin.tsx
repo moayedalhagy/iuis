@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 export default function Signin() {
   return (
-    <div className="bg-[#F5F5F5] mt-6 pt-5  px-5 md:px-12">
+    <div className="bg-white mt-6 pt-5  px-5 md:px-12">
       {/* title  */}
 
       <SectionTitle text={"التسجيل في الجامعة"} />
