@@ -40,3 +40,124 @@
   background-image:   linear-gradient(rgba(3, 166, 121, 0.5), rgba(2, 115, 95, 1));
 }
 
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideInFromLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideInFromTop {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideInFromBottom {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fadeOut {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.animate-slideInFromRight {
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
+.animate-slideInFromTop {
+  animation: slideInFromTop 1s ease-out forwards;
+}
+
+.animate-slideInFromBottom {
+  animation: slideInFromBottom 1s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 1s ease-out forwards;
+}
+
+.typewriter   {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+
+  animation: 
+    typing 1s steps(30, end),
+    blink-caret 1s step-end infinite;
+    
+}
+.typewriter-delay {
+  animation-delay: 1s;
+   
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+  from {opacity: 0;}
+  to {opacity: 100%;}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+.text-line {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  width: 0;
+  animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Define typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Caret blinking effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+/* Hide second line initially */
+#line2 {
+  visibility: hidden;
+}
