@@ -18,15 +18,8 @@
   }
 
 }
-
- 
-
  
  
- body {
-   font-family: var(--font-tuns);
- }
-
  
  .hero{
     background-image: url('/images/bg.jpg');
