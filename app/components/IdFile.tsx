@@ -54,7 +54,6 @@ export default function IdFile() {
           width={"500"}
           height={"500"}
           alt={`Carousel item 1}`}
-          objectFit="contain"
           className="flex-1 border-2 border-primary rounded-lg shadow-md shadow-primary "
         />
 
@@ -63,7 +62,6 @@ export default function IdFile() {
           // layout=" "
           width={"500"}
           height={"500"}
-          objectFit="cover"
           alt={`Carousel item 1}`}
           className="flex-1 border-2 border-primary rounded-lg shadow-md shadow-primary"
         />
@@ -90,7 +88,7 @@ export default function IdFile() {
                   // layout=" "
                   // width={"600"}
                   // height={"600"}
-                  objectFit="contain"
+
                   fill={true}
                   alt={`Carousel item ${index + 1}`}
                   className="ml-auto mr-auto"

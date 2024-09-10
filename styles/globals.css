@@ -20,6 +20,12 @@
 }
 
  
+@layer base {
+  img {
+      width: auto;
+      height: auto;
+  }
+}
 
  
  
