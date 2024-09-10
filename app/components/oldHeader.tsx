@@ -52,6 +52,7 @@ const Header = () => {
             width={"40"}
             height={"40"}
             alt="iuos logo"
+            loading="lazy"
           />
           {/* end Brand  */}
           <div className="justify-self-end">

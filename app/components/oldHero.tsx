@@ -23,6 +23,7 @@ export default function Hero() {
               width={"20"}
               height={"20"}
               alt="logo"
+              loading="lazy"
             />
             <span>اضغط للتسجيل</span>
           </p>
@@ -34,6 +35,7 @@ export default function Hero() {
             width={"100"}
             height={"100"}
             alt="logo"
+            loading="lazy"
           />
         </div>
       </div>

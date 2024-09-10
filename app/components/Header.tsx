@@ -53,11 +53,15 @@ const Header = () => {
               width={"60"}
               height={"60"}
               alt="iuos logo"
+              loading="lazy"
             />
           </div>
           {/* end Brand  */}
           <div className=" ">
-            <button onClick={()=>toast.error("التسجيل غير متاح حالياً")} className="text-md text-nowrap  w-auto  text-white sign_btn_gradient py-2 px-4 rounded-xl  shadow-[0_2px_10px_0_#147CA6]">
+            <button
+              onClick={() => toast.error("التسجيل غير متاح حالياً")}
+              className="text-md text-nowrap  w-auto  text-white sign_btn_gradient py-2 px-4 rounded-xl  shadow-[0_2px_10px_0_#147CA6]"
+            >
               اضغط للتسجيل
             </button>
           </div>

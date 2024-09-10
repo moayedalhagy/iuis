@@ -55,6 +55,7 @@ export default function IdFile() {
           height={"500"}
           alt={`Carousel item 1}`}
           className="flex-1 border-2 border-primary rounded-lg shadow-md shadow-primary "
+          loading="lazy"
         />
 
         <Image
@@ -64,6 +65,7 @@ export default function IdFile() {
           height={"500"}
           alt={`Carousel item 1}`}
           className="flex-1 border-2 border-primary rounded-lg shadow-md shadow-primary"
+          loading="lazy"
         />
       </div>
 
@@ -92,6 +94,7 @@ export default function IdFile() {
                   fill={true}
                   alt={`Carousel item ${index + 1}`}
                   className="ml-auto mr-auto"
+                  loading="lazy"
                 />
               </div>
             ))}

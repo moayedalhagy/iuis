@@ -24,6 +24,7 @@ export default function Goals() {
               width={"150"}
               height={"150"}
               alt="logo"
+              loading="lazy"
             />
           </div>
         </div>
@@ -55,6 +56,7 @@ export default function Goals() {
             width={"650"}
             height={"150"}
             alt="logo"
+            loading="lazy"
           />
         </div>
 
@@ -78,6 +80,7 @@ export default function Goals() {
           width={"150"}
           height={"150"}
           alt="logo"
+          loading="lazy"
         />
       </div>
     </div>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Loading from "../components/Loading";
 // bg-green-300 hero text-center pt-20 text-white flex flex-row justify-center items-center gap-3
 export default function Hero() {
   return (
@@ -20,6 +20,8 @@ export default function Hero() {
           width={"150"}
           height={"150"}
           alt="logo"
+          loading="lazy"
+          placeholder="empty"
         />
       </div>
     </div>

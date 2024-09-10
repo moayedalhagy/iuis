@@ -22,6 +22,7 @@ export default function Intro() {
             width={"150"}
             height={"150"}
             alt="logo"
+            loading="lazy"
           />
         </div>
       </div>
@@ -37,6 +38,7 @@ export default function Intro() {
           width={"150"}
           height={"150"}
           alt="logo"
+          loading="lazy"
         />
       </div>
     </div>

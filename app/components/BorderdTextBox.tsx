@@ -15,10 +15,11 @@ export default function BorderdTextBox({ text, icon_src }: BorderdTextBoxType) {
           <div className="absolute right-0  w-full -top-12 flex flex-row justify-center items-center">
             <Image
               src={icon_src}
-              alt=""
+              alt=" stars image"
               width={"70"}
               height={"70"}
               className="rounded-full p-0"
+              loading="lazy"
             />
           </div>
         ) : (

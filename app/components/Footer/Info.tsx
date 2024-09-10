@@ -32,6 +32,7 @@ export default function Info() {
           height={"140"}
           alt="ok"
           className="mb-2"
+          loading="lazy"
         />
         <div className="mx-2 flex-1   flex flex-col justify-end ">
           <div className="flex flex-col justify-between border-r-2 border-r-success    gap-y-1   pr-2 mr-1 mb-2">

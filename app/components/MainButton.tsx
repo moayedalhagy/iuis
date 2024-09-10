@@ -8,6 +8,7 @@ export default function MainButton() {
         width={"20"}
         height={"20"}
         alt="logo"
+        loading="lazy"
       />
       <span>اضغط للتسجيل</span>
     </p>
