@@ -11,7 +11,7 @@ export default function Hero() {
       </h1>
 
       <div className="mt-6 text-lg md:text-xl ">
-        <p className="typewriter">صرح علمي يجمع تخصصات فريـدة</p>
+        <p className="typewriter pb-1">صرح علمي يجمع تخصصات فريـدة</p>
         <p className="  typewriter  pt-1">ضمن بيئة معرفيـة متطورة</p>
       </div>
       <div className="my-8 animate-slideInFromBottom">
