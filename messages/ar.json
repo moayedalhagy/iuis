@@ -2,5 +2,10 @@
   "HomePage": {
     "title": "مرحبا بالعالم!",
     "about": "كيفك"
+  },
+  "sections": {
+    "faq": {
+      "section_title": "الأسئلة الشائعة"
+    }
   }
 }
