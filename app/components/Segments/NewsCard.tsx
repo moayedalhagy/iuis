@@ -1,6 +1,7 @@
 import { NewsCardType } from "@/app/_types/NewsCardType";
 import NewsCardButton from "../NewsCardButton";
 import { FaRegCalendarDays } from "react-icons/fa6";
+import Image from "next/image";
 
 export default function NewsCard({
   title,
@@ -12,8 +13,8 @@ export default function NewsCard({
   return (
     <div>
       <div className="max-w-sm rounded-lg border border-gray-200 bg-white shadow">
-        <img className="rounded-t-lg" src={image} alt="card image" />
-
+        <Image className="rounded-t-lg"   src={image} alt="card image" layout={'responsive'} width={'100'} height={'100'}  />
+       
         <div className="p-5">
           {/* Card Title  */}
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary">
