@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import SectionTitle from "./SectionTitle";
 import { toast } from "react-toastify";
 export default function Signin() {
@@ -20,13 +20,16 @@ export default function Signin() {
           </div>
 
           <div className=" md:my-6 lg:my-auto   flex flex-row justify-center ">
-            <button onClick={()=>toast.error("التسجيل غير متاح حالياً")} className="w-[200px] lg:ml-[10%] lg:self-end text-xs md:text-lg lg:text-2xl  text-white  bg-gradient-to-r from-[#137DA4] to-[#03A579] py-2 px-4 rounded-xl  shadow-[0_2px_10px_0_#147CA6]">
+            <button
+              onClick={() => toast.error("التسجيل غير متاح حالياً")}
+              className="w-[200px] lg:ml-[10%] lg:self-end text-xs md:text-lg lg:text-2xl  text-white  bg-gradient-to-r from-[#137DA4] to-[#03A579] py-2 px-4 rounded-xl  shadow-[0_2px_10px_0_#147CA6]"
+            >
               اضغط للتسجيل
             </button>
           </div>
         </div>
         <div className="md:w-1/2">
-          <img src={"/images/chairs_2.svg"} alt="logo" />
+          <img src={"/images/chairs.webp"} alt="logo" />
         </div>
       </div>
     </div>

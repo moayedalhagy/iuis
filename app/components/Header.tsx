@@ -49,7 +49,7 @@ const Header = () => {
           {/* Brand  */}
           <div>
             <Image
-              src={"/images/logo_semi.png"}
+              src={"/images/logo_semi.webp"}
               width={"60"}
               height={"60"}
               alt="iuos logo"

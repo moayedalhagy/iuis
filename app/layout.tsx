@@ -11,6 +11,7 @@ import "react-toastify/ReactToastify.min.css";
 const alexandria = Alexandria({
   weight: ["400", "700"],
   subsets: ["arabic", "latin"],
+  preload: true,
 });
 
 export const viewport: Viewport = {
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
       "الجامعة الإسلامية في سوريا تقدم تعليمًا عالي الجودة في مختلف المجالات الأكاديمية والدينية.",
     url: "https://iuis.university",
     type: "website",
-    images: ["/images/seo_logo.png"],
+    images: ["/images/seo_logo.webp"],
   },
   icons: {
     icon: "favicon.ico",

@@ -52,7 +52,7 @@ export default function Goals() {
       <div className="flex flex-col lg:flex-row justify-start   ">
         <div className=" ">
           <Image
-            src={"/images/goals_logo.svg"}
+            src={"/images/goals_logo.webp"}
             width={"650"}
             height={"150"}
             alt="logo"
