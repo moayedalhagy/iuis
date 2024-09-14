@@ -13,6 +13,7 @@ import "@styles/globals.css";
 const alexandria = Alexandria({
   weight: ["400", "700"],
   subsets: ["arabic", "latin"],
+  preload : true,
 });
 
 export const metadata: Metadata = {
