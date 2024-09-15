@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -39,6 +41,9 @@ const Header = () => {
     { href: "/home", label: "الأخبار", is_active: false, id: 5 },
     { href: "/home", label: "الأنظمة والقرارات", is_active: false, id: 6 },
   ];
+
+  const router = useRouter();
+
   const tempFlexHeader = "";
   const itemClass =
     "block py-1 px-3 rounded-lg hover:bg-primary hover:shadow   hover:shadow-[0px_0px_2px_0px_#f7fafc]";
@@ -59,10 +64,14 @@ const Header = () => {
           {/* end Brand  */}
           <div className=" ">
             <button
-              onClick={() => toast.error("التسجيل غير متاح حالياً")}
+              onClick={() =>
+                router.push(
+                  "https://comparisonreleaseapp.education-syria.com/comparisonapp.apk"
+                )
+              }
               className="text-md text-nowrap  w-auto  text-white sign_btn_gradient py-2 px-4 rounded-xl  shadow-[0_2px_10px_0_#147CA6]"
             >
-              اضغط للتسجيل
+              تحميل التطبيق
             </button>
           </div>
         </div>
