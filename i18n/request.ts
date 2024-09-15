@@ -9,6 +9,14 @@ export default getRequestConfig(async ({ locale }) => {
   }
 
   return {
-    messages: (await import(`../messages/${locale}.json`)).default,
+    messages: {
+      ...(await import(`../messages/${locale}/pages.json`)).default,
+      ... (await import(`../messages/${locale}.json`)).default,
+      
+    }
   };
 });
+
+
+
+ 

@@ -16,7 +16,7 @@ const links: Array<_Link> = [
   { href: "/home", label: "من نحن", is_active: false, id: 2 },
   { href: "/home", label: "البرامج الأكاديمية", is_active: false, id: 3 },
   { href: "/home", label: "الكادر التدريسي", is_active: false, id: 4 },
-  { href: "/home", label: "الأخبار", is_active: false, id: 5 },
+  { href: "/news", label: "الأخبار", is_active: false, id: 5 },
   { href: "/home", label: "الأنظمة والقرارات", is_active: false, id: 6 },
 ];
 
