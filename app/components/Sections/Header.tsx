@@ -46,11 +46,11 @@ export default function Header() {
     "block py-1 px-3 rounded-lg hover:bg-primary hover:shadow   hover:shadow-[0px_0px_2px_0px_#f7fafc]";
   return (
     <header>
-      <nav className="py-2  bg-info  shadow-[inset_0px_-0.5px_3px_0px_#ffffff] ">
-        <div className="px-3 md:px-12 max-w-screen  flex flex-wrap md:flex-nowrap items-center justify-between xl:justify-start gap-10   p-2">
+      <nav className="bg-info py-2 shadow-[inset_0px_-0.5px_3px_0px_#ffffff]">
+        <div className="max-w-screen flex flex-wrap items-center justify-between gap-10 p-2 px-3 md:flex-nowrap md:px-12 xl:justify-start">
           {/* Brand  */}
           <Image
-            src={"/images/logo_semi.png"}
+            src={"/images/logo_semi.webp"}
             width={"60"}
             height={"60"}
             alt="iuis logo"
@@ -67,13 +67,13 @@ export default function Header() {
             onClick={toggleMenu}
             type="button"
             // inline-flex
-            className="   items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-default"
             aria-expanded={isMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
             <svg
-              className="w-5 h-5"
+              className="h-5 w-5"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -94,10 +94,10 @@ export default function Header() {
           <div
             className={`${
               isMenuOpen ? "block" : "hidden"
-            } w-full md:block md:mx-10`}
+            } w-full md:mx-10 md:block`}
             id="navbar-default"
           >
-            <ul className="  text-white  flex flex-col md:p-0  gap-3 md:gap-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:justify-evenly ">
+            <ul className="flex flex-col gap-3 text-white md:mt-0 md:flex-row md:justify-evenly md:gap-0 md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
               {links.map((item) => {
                 return (
                   <li key={item.id}>
@@ -108,10 +108,10 @@ export default function Header() {
                 );
               })}
 
-              <li className="  ">
+              <li className=" ">
                 <Link
                   href={"#"}
-                  className="block py-1 px-3 md:rounded-xl md:border    cursor-not-allowed"
+                  className="block cursor-not-allowed px-3 py-1 md:rounded-xl md:border"
                 >
                   البوابة الإلكترونية
                 </Link>

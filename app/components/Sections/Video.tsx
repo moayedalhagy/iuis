@@ -10,7 +10,7 @@ export default function Video() {
             className="rounded-xl border-0 outline-0"
             width="853"
             height="480"
-            src="https://www.youtube.com/embed/QmJoBPk3Nnk"
+            src="https://www.youtube.com/embed/8UYy6yRttYw"
             title="المقدمة التعريفية للجامعة الإسلامية"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           ></iframe>
