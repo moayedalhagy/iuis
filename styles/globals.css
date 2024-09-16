@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
 
 
 @layer utilities {
@@ -32,4 +33,5 @@
 .line-text-s {
   background-image:   linear-gradient(rgba(3, 166, 121, 0.5), rgba(2, 115, 95, 1));
 }
+
 
