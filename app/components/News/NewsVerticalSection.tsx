@@ -1,6 +1,6 @@
 import Divider from "@/app/components/Divider";
 import SearchInput from "@/app/components/SearchInput";
-import NewsItem from "@/app/components/Segments/NewsItem";
+import NewsItem from "@/app/components/News/NewsItem";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 

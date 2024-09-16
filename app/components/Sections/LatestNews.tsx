@@ -1,6 +1,6 @@
 import { NewsCardType } from "@/app/_types/NewsCardType";
 import SectionTitle from "../SectionTitle";
-import NewsCard from "../Segments/NewsCard";
+import NewsCard from "../News/NewsCard";
 import GradientButton from "../GradientButton";
 
 const TempString: string = `            في رحاب الإيمان، تنمو الأرواح وتسمو القلوب بالتقوى والصلاح. نستنير

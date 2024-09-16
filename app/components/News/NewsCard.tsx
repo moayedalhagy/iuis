@@ -1,5 +1,5 @@
 import { NewsCardType } from "@/app/_types/NewsCardType";
-import NewsCardButton from "../NewsCardButton";
+import NewsCardButton from "./NewsCardButton";
 import { FaRegCalendarDays, FaShareNodes } from "react-icons/fa6";
 import Image from "next/image";
 import { FaRegEye } from "react-icons/fa";

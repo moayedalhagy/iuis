@@ -1,15 +1,12 @@
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import HeroImage from "@/components/Segments/HeroImage";
-import NewsCard from "@/app/components/Segments/NewsCard";
-import Divider from "@/app/components/Divider";
-import SearchInput from "@/app/components/SearchInput";
 
-import NewsItem from "@/app/components/Segments/NewsItem";
-import Link from "next/link";
+import HeroImage from "@/components/Segments/HeroImage";
+import NewsCard from "@/app/components/News/NewsCard";
 import PaginationControl from "@/app/components/PaginationControl";
 import Visuals from "@/app/components/Sections/Visuals";
-import NewsVerticalSection from "@/app/components/Segments/NewsVerticalSection";
+import NewsVerticalSection from "@/app/components/News/NewsVerticalSection";
+
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("NewsPage");
   return {

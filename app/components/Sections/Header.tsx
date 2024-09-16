@@ -17,7 +17,7 @@ const links: Array<_Link> = [
   { href: "/home", label: "البرامج الأكاديمية", is_active: false, id: 3 },
   { href: "/home", label: "الكادر التدريسي", is_active: false, id: 4 },
   { href: "/news", label: "الأخبار", is_active: false, id: 5 },
-  { href: "/home", label: "الأنظمة والقرارات", is_active: false, id: 6 },
+  { href: "/decisions", label: "الأنظمة والقرارات", is_active: false, id: 6 },
 ];
 
 export default function Header() {

@@ -2,11 +2,11 @@ import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import HeroImage from "@/components/Segments/HeroImage";
 
-import NewsVerticalSection from "@/app/components/Segments/NewsVerticalSection";
-import NewsCardExtended from "@/app/components/Segments/NewsCardExtended";
+import NewsVerticalSection from "@/app/components/News/NewsVerticalSection";
+import NewsCardExtended from "@/app/components/News/NewsCardExtended";
 import Divider from "@/app/components/Divider";
 import Image from "next/image";
-import NewsItem from "@/app/components/Segments/NewsItem";
+import NewsItem from "@/app/components/News/NewsItem";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("NewsPage");
