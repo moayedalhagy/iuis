@@ -35,12 +35,12 @@ export default function WhoUsGoals() {
         <div className="mt-3 flex flex-col items-center justify-center gap-y-10 py-10">
           {/* my Vision */}
           <div className="w-full md:w-[85%] lg:w-[75%]">
-            <p className="mb-3 text-xl font-semibold text-success">رؤيتنا:</p>
+            <p className="mb-3 text-lg font-semibold text-success">رؤيتنا:</p>
             <BorderdTextBox text={OneGoalsSection} icon_src={null} />
           </div>
           {/* my message */}
           <div className="w-full md:w-[85%] lg:w-[75%]">
-            <p className="mb-3 text-xl font-semibold text-success">رسالتنا:</p>
+            <p className="mb-3 text-lg font-semibold text-success">رسالتنا:</p>
             <BorderdTextBox text={TwoGoalsSection} icon_src={null} />
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function WhoUsGoals() {
       {/* goals  */}
       <div className="mt-3 flex flex-col items-center justify-center gap-y-10 px-5 py-10 md:px-12">
         <div className="w-full md:w-[85%] lg:w-[75%]">
-          <p className="mb-3 text-xl font-semibold text-success">أهدافنا:</p>
+          <p className="mb-3 text-lg font-semibold text-success">أهدافنا:</p>
         </div>
       </div>
       <div className="flex flex-col justify-start lg:flex-row">

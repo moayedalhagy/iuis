@@ -16,7 +16,7 @@ export default function WhoUsWhyCard({
         height={"30"}
         className="absolute -top-6"
       />
-      <p className="leading-7 text-primary">{text}</p>
+      <p className="text-center leading-8 text-primary">{text}</p>
     </div>
   );
 }

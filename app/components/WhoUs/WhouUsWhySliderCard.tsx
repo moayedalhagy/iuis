@@ -14,8 +14,8 @@ export default function WhouUsWhySliderCard() {
     <Swiper
       grabCursor
       autoplay={{
-        delay: 2000,
-        disableOnInteraction: false,
+        delay: 1500,
+        disableOnInteraction: true,
       }}
       pagination={{
         clickable: true,
