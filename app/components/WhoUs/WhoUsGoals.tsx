@@ -8,7 +8,7 @@ import {
 } from "../../[locale]/texts";
 import GoalLine from "../GoalLine";
 
-export default function Goals() {
+export default function WhoUsGoals() {
   const padding = "px-5 md:px-12";
   return (
     <div className={`mt-6 bg-[#F5F5F5] pt-7`}>
@@ -55,7 +55,7 @@ export default function Goals() {
       <div className="flex flex-col justify-start lg:flex-row">
         <div className=" ">
           <Image
-            src={"/images/goals_logo.svg"}
+            src={"/images/goals_logo.webp"}
             width={"650"}
             height={"150"}
             alt="logo"
