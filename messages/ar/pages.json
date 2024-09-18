@@ -20,6 +20,13 @@
         "categories": "الـتـصـنـيـفـات",
         "keywords": "كـلـمـات ذات صـلـة"
     },
+    "ProgramsPage": {
+        "title": "البرامج الأكاديمية",
+        "about": "كيفك",
+        "latest_decisions": "أحدث القرارات",
+        "categories": "الـتـصـنـيـفـات",
+        "keywords": "كـلـمـات ذات صـلـة"
+    },
     "WhoUsPage": {
         "title": "مــن نــحــن",
         "about": "كيفك"

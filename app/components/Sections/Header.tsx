@@ -14,7 +14,7 @@ type _Link = {
 const links: Array<_Link> = [
   { href: "/", label: "الرئيسية", is_active: false, id: 1 },
   { href: "/who-us", label: "من نحن", is_active: false, id: 2 },
-  { href: "/home", label: "البرامج الأكاديمية", is_active: false, id: 3 },
+  { href: "/programs", label: "البرامج الأكاديمية", is_active: false, id: 3 },
   { href: "/home", label: "الكادر التدريسي", is_active: false, id: 4 },
   { href: "/news", label: "الأخبار", is_active: false, id: 5 },
   { href: "/decisions", label: "الأنظمة والقرارات", is_active: false, id: 6 },
