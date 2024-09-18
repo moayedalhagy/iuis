@@ -8,7 +8,7 @@ export default function Footer() {
     ssr: false,
   });
   return (
-    <footer className="bg-primary">
+    <footer className="relative -z-10 bg-primary">
       <div className="flex flex-col gap-x-5 gap-y-5 px-5 py-2 md:flex-row">
         <div className="flex-1">
           <Info />
