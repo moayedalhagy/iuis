@@ -30,13 +30,14 @@ export default function WhouUsWhySliderCard() {
       }}
     >
       {data.map((item, index) => (
-        <div key={index}>
-          <SwiperSlide className="overflow-hidden py-5">
-            <div className="mx-auto min-w-[250px] max-w-[250px]" key={index}>
-              <WhoUsWhyCard text={item.text} image={item.image} />
-            </div>
-          </SwiperSlide>
-        </div>
+        <SwiperSlide
+          className="overflow-hidden py-5"
+          key={`slide-whous-${index + 1}`}
+        >
+          <div className="mx-auto min-w-[250px] max-w-[250px]">
+            <WhoUsWhyCard text={item.text} image={item.image} />
+          </div>
+        </SwiperSlide>
       ))}
     </Swiper>
   );

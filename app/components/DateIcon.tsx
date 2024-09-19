@@ -5,7 +5,7 @@ export default function DateIcon({ date }: { date: string }) {
       {/* Icon  */}
       <FaRegCalendarDays className="text-info" />
       {/* text  */}
-      <span className="text-secondary">{date}</span>
+      <span className="t text-secondary">{date}</span>
     </p>
   );
 }

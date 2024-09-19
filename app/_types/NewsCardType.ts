@@ -11,9 +11,9 @@ export type NewsCardType = {
   newsId?: number;
   cardImageLink: string;
   title: string;
-  description: string;
+  description?: string;
   newsDate: string;
-  newsBodyText: string;
+  newsBodyText?: string;
   views: number;
   newsLink: string;
   newsCategoryId?: number;
@@ -21,4 +21,9 @@ export type NewsCardType = {
   newsCategoryName?: string;
   class?: string;
   hideShareIcon?: boolean;
+};
+
+export type NewsCategoriesType = {
+  newsCategoryId: string;
+  newsCategoryName: string;
 };

@@ -1,8 +1,9 @@
 import { NewsCardType } from "@/app/_types/NewsCardType";
 import NewsCardButton from "./NewsCardButton";
-import { FaRegCalendarDays, FaShareNodes } from "react-icons/fa6";
+import { FaRegCalendarDays } from "react-icons/fa6";
 import Image from "next/image";
 import { FaRegEye } from "react-icons/fa";
+import NewsShareButton from "./NewsShareButton";
 
 export default function NewsCard({
   title,
@@ -10,8 +11,10 @@ export default function NewsCard({
   newsDate,
   cardImageLink,
   newsLink,
+  newsBodyText,
   views,
   hideShareIcon,
+  newsId,
 }: NewsCardType) {
   return (
     <div>
@@ -49,14 +52,7 @@ export default function NewsCard({
             </div>
 
             {/* News share  */}
-            {!hideShareIcon && (
-              <p className="flex flex-row items-baseline gap-x-2 self-end text-sm">
-                {/* Icon  */}
-                <FaShareNodes className="text-info" />
-                {/* text  */}(
-                <span className="baseline text-secondary">{"مشاركة"}</span>)
-              </p>
-            )}
+            {!hideShareIcon && <NewsShareButton resource={`news/${newsId}`} />}
           </div>
           {/* Card Title  */}
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary">
@@ -66,7 +62,7 @@ export default function NewsCard({
 
           {/* Card description */}
           <p className="mb-3 mt-4 line-clamp-3 font-normal leading-8 text-gray-700 dark:text-gray-400">
-            {description}
+            {description || newsBodyText}
           </p>
           {/* End description */}
 
