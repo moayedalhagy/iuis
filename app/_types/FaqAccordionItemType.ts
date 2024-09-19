@@ -1,4 +1,4 @@
 export type FaqAccordionItemType = {
-  title: string;
-  body: string;
+  questionText: string;
+  answer: string;
 };

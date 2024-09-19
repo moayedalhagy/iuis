@@ -1,5 +1,9 @@
+import getIntroductoryVideos from "@/app/_actions/IntroVideo";
 import SectionTitle from "../SectionTitle";
-export default function Video() {
+import { IntroVideoType } from "@/app/_types/IntroVideoType";
+export default async function Video() {
+  const videoData: Array<IntroVideoType> = await getIntroductoryVideos();
+  console.log(videoData);
   return (
     <div className="mt-6 bg-white px-5 pt-7 md:px-12">
       {/* title  */}
@@ -10,7 +14,8 @@ export default function Video() {
             className="rounded-xl border-0 outline-0"
             width="853"
             height="480"
-            src="https://www.youtube.com/embed/8UYy6yRttYw"
+            // src="https://www.youtube.com/embed/8UYy6yRttYw"
+            src={videoData[0].videoUrl}
             title="المقدمة التعريفية للجامعة الإسلامية"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           ></iframe>

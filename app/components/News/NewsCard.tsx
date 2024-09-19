@@ -6,17 +6,19 @@ import { FaRegEye } from "react-icons/fa";
 
 export default function NewsCard({
   title,
-  body,
-  date,
-  image,
-  link,
+  description,
+  newsDate,
+  cardImageLink,
+  newsLink,
+  views,
+  hideShareIcon,
 }: NewsCardType) {
   return (
     <div>
       <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow">
         <Image
           className="max-h-[312px] rounded-t-lg"
-          src={image}
+          src={cardImageLink}
           alt="card image"
           layout={"responsive"}
           width={"50"}
@@ -32,7 +34,9 @@ export default function NewsCard({
                 {/* Icon  */}
                 <FaRegCalendarDays className="text-info" />
                 {/* text  */}
-                <span className="text-secondary">{date}</span>
+                <span className="text-secondary" dir="ltr">
+                  {newsDate}
+                </span>
               </p>
               {/* News views  */}
               <p className="flex flex-row items-baseline gap-x-2 text-sm">
@@ -40,18 +44,19 @@ export default function NewsCard({
                 <FaRegEye className="text-info" />
 
                 {/* text  */}
-                <span className="text-secondary">236</span>
+                <span className="text-secondary">{views}</span>
               </p>
             </div>
 
             {/* News share  */}
-            <p className="flex flex-row items-baseline gap-x-2 self-end text-sm">
-              {/* Icon  */}
-              <FaShareNodes className="text-info" />
-
-              {/* text  */}
-              <span className="baseline text-secondary">{"مشاركة"}</span>
-            </p>
+            {!hideShareIcon && (
+              <p className="flex flex-row items-baseline gap-x-2 self-end text-sm">
+                {/* Icon  */}
+                <FaShareNodes className="text-info" />
+                {/* text  */}(
+                <span className="baseline text-secondary">{"مشاركة"}</span>)
+              </p>
+            )}
           </div>
           {/* Card Title  */}
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary">
@@ -61,13 +66,13 @@ export default function NewsCard({
 
           {/* Card description */}
           <p className="mb-3 mt-4 line-clamp-3 font-normal leading-8 text-gray-700 dark:text-gray-400">
-            {body}
+            {description}
           </p>
           {/* End description */}
 
           {/* Card Button  */}
           <div className="flex flex-row justify-end">
-            <NewsCardButton text="قراءة الخبر" link={link} />
+            <NewsCardButton text="قراءة الخبر" link={newsLink} />
           </div>
           {/* Card Button  */}
         </div>

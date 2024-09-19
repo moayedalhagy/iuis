@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IdentityIntroSection } from "../../[locale]/texts";
 import BorderdTextBox from "../BorderdTextBox";
 import GradientButton from "../GradientButton";
@@ -42,7 +43,9 @@ export default function Intro() {
       </div>
 
       <div className="mt-3 flex flex-row justify-center py-2">
-        <GradientButton text="المزيد عن الجامعة" />
+        <Link href={"/who-us"}>
+          <GradientButton text="المزيد عن الجامعة" />
+        </Link>
       </div>
     </div>
   );

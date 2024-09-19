@@ -51,7 +51,7 @@ export default function FaqAccordion({
               <p
                 className={`flex-1 px-1 text-info ${open === index ? "text-white" : ""} `}
               >
-                {item.title}
+                {item.questionText}
               </p>
               <Arrow open={open} index={index} />
             </button>
@@ -61,7 +61,7 @@ export default function FaqAccordion({
                 open === index ? "block" : "hidden"
               }`}
             >
-              {item.body}
+              {item.answer}
             </div>
           </div>
         );
