@@ -1,12 +1,3 @@
-// export type NewsCardType = {
-//   id?: number;
-//   title: string;
-//   body: string;
-//   date: string;
-//   image: string;
-//   link: string;
-//   class?: string;
-// };
 export type NewsCardType = {
   newsId?: number;
   cardImageLink: string;
@@ -23,7 +14,15 @@ export type NewsCardType = {
   hideShareIcon?: boolean;
 };
 
-export type NewsCategoriesType = {
-  newsCategoryId: string;
-  newsCategoryName: string;
+export type NewsCategoriesType = Pick<
+  NewsCardType,
+  "newsCategoryId" | "newsCategoryName"
+>;
+
+export type NewsKeywordsType = Pick<
+  NewsCardType,
+  "newsId" | "newsCategoryId"
+> & {
+  keywordId: number;
+  keyword: string;
 };

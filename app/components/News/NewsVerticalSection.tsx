@@ -1,10 +1,11 @@
 import Divider from "@/app/components/Divider";
 import SearchInput from "@/app/components/SearchInput";
 import NewsItem from "@/app/components/News/NewsItem";
-import Link from "next/link";
+
 import { getTranslations } from "next-intl/server";
 import { NewsCardType } from "@/app/_types/NewsCardType";
 import NewsCatgoriesList from "./NewsCatgoriesList";
+import NewsKeywords from "./NewsKeywords";
 
 export default async function NewsVerticalSection({
   data,
@@ -51,17 +52,7 @@ export default async function NewsVerticalSection({
 
       <div className="keywords mt-4">
         <p className="text-2xl text-success">{t("keywords")}</p>
-        <div className="keywords-list mt-4 grid grid-cols-2 grid-rows-3 gap-2 gap-y-4 p-3">
-          {[1, 2, 3, 4, 5].map((item, index) => (
-            <Link
-              key={`news-keyword-${index}`}
-              href="#"
-              className="text-nowrap rounded-[19px] bg-neutral-100 px-1 py-1 text-center text-[#9c9c9c] last:odd:col-span-2 hover:bg-neutral-200"
-            >
-              الفصل الأول
-            </Link>
-          ))}
-        </div>
+        <NewsKeywords />
       </div>
     </div>
   );
