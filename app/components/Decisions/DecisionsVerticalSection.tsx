@@ -4,8 +4,20 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import DecisionsItem from "./DecisionsItem";
 
-export default async function DecisionsVerticalSection() {
+import {
+  DecisionsTypeTypes,
+  DecisionsTypes,
+} from "@/app/_types/DecisionsTypes";
+import getDecisionsTypes from "@/app/_actions/DecisionsTypes";
+
+export default async function DecisionsVerticalSection({
+  data,
+}: {
+  data: Array<DecisionsTypes>;
+}) {
   const t = await getTranslations("DecisionsPage");
+  const decisionsTypes: Array<DecisionsTypeTypes> = await getDecisionsTypes();
+
   return (
     <div className="vertical-section hidden w-80 rounded-lg bg-white px-2 pt-7 lg:block">
       {/* search input  */}
@@ -19,9 +31,9 @@ export default async function DecisionsVerticalSection() {
       <div className="latest-news flex flex-col">
         <p className="text-2xl text-success">{t("latest_decisions")}</p>
         <div className="news-list mt-4 space-y-5">
-          {[1, 2, 3, 4, 5].map((item, index) => (
+          {data.map((item, index) => (
             <div key={index}>
-              <DecisionsItem />
+              <DecisionsItem data={item} />
             </div>
           ))}
         </div>
@@ -33,9 +45,13 @@ export default async function DecisionsVerticalSection() {
         <p className="text-2xl text-success">{t("categories")}</p>
         <div className="categories-list mt-4 overflow-hidden px-4">
           <ul className="list-disc space-y-4 text-primary">
-            {[1, 2, 3, 4, 5].map((item, index) => (
+            {decisionsTypes.map((item, index) => (
               <li className="cursor-pointer" key={index}>
-                <Link href="#">كلام عربي (566456)</Link>
+                <Link
+                  href={`?decisionTypeId=${item.decisionTypeId}&decisionTitle=${item.decisionTypeName}`}
+                >
+                  {item.decisionTypeName}
+                </Link>
               </li>
             ))}
           </ul>
