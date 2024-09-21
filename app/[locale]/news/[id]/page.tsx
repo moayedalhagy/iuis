@@ -7,6 +7,9 @@ import NewsCardExtended from "@/app/components/News/NewsCardExtended";
 import Divider from "@/app/components/Divider";
 import Image from "next/image";
 import NewsItem from "@/app/components/News/NewsItem";
+import { NewsCardType } from "@/app/_types/NewsCardType";
+import getSingleNews from "@/app/_actions/SingleNews";
+import getNews from "@/app/_actions/news";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("NewsPage");
@@ -18,25 +21,30 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function SingleNews({
   params,
 }: {
-  params: { id: string };
+  params: { id: number };
 }) {
   const t = await getTranslations("NewsPage");
+
+  const singleNewsData: NewsCardType = await getSingleNews(params.id);
+  const linkedNewsData: Array<NewsCardType> = await getNews();
+
   return (
     <main className="bg-neutral-100">
       <HeroImage image={"/images/sho3ib.webp"} title={"الأخبار"} />
       <div className="px-5 pt-7 md:px-12">
         <div className="content flex flex-row lg:gap-x-10">
           {/* vertical section  */}
-          <NewsVerticalSection />
+          <NewsVerticalSection data={[singleNewsData]} />
 
           {/* cards section  */}
           <div className="card-section flex-1 overflow-hidden rounded-lg bg-white px-3 pt-7">
             <div className="w-full">
               <NewsCardExtended
-                title={"إجراء الاختبــــــــارات الفصلية في حفظ القرآن الكريم"}
-                body={t("temp")}
-                date={"01-01-2023"}
-                image={"/images/temp/big-card.png"}
+                title={singleNewsData.title}
+                newsBodyText={singleNewsData.newsBodyText}
+                newsDate={`${singleNewsData.newsDate} : ${singleNewsData.newsTime}`}
+                cardImageLink={singleNewsData.cardImageLink}
+                views={singleNewsData.views}
               />
 
               <Divider color="bg-red-300" />
@@ -65,9 +73,17 @@ export default async function SingleNews({
               <div className="related-news p-1">
                 <p className="text-2xl text-success">{t("related_news")}</p>
                 <div className="mt-3 flex flex-col gap-y-5 md:flex-row md:gap-x-5 md:gap-y-0">
-                  <NewsItem />
-                  <NewsItem />
-                  <NewsItem />
+                  {linkedNewsData.slice(0, 5).map((item, index) => (
+                    <div key={`news-item-${index}`}>
+                      <NewsItem
+                        newsId={item.newsId}
+                        cardImageLink={item.cardImageLink}
+                        newsDate={item.newsDate}
+                        newsTime={item.newsTime}
+                        title={item.title}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

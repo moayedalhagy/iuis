@@ -1,17 +1,20 @@
 import { NewsCardType } from "@/app/_types/NewsCardType";
-import { FaRegCalendarDays, FaShareNodes } from "react-icons/fa6";
+import { FaShareNodes } from "react-icons/fa6";
 import Image from "next/image";
 import { FaRegEye } from "react-icons/fa";
-import Divider from "../Divider";
+
+import DateIcon from "../DateIcon";
 
 export default function NewsCardExtended({
   title,
-  body,
-  date,
-  image,
-  //views
-  //news_link_for_share
-}: Omit<NewsCardType, "link">) {
+  newsBodyText,
+  newsDate,
+  cardImageLink,
+  views,
+}: Pick<
+  NewsCardType,
+  "title" | "newsBodyText" | "newsDate" | "cardImageLink" | "views"
+>) {
   return (
     <div>
       {/* shadow rounded-lg border border-gray-200  */}
@@ -19,8 +22,8 @@ export default function NewsCardExtended({
         {/* news image  */}
         <Image
           className="max-h-[312px] rounded-t-lg"
-          src={image}
-          alt="card image"
+          src={cardImageLink}
+          alt="Extended News Card Image"
           layout={"responsive"}
           width={"50"}
           height={"50"}
@@ -32,19 +35,15 @@ export default function NewsCardExtended({
             <div className="flex">
               {/* News date  */}
 
-              <p className="me-4 flex flex-row items-baseline gap-x-2 text-sm">
-                {/* Icon  */}
-                <FaRegCalendarDays className="text-info" />
-                {/* text  */}
-                <span className="text-secondary">{date}</span>
-              </p>
+              <DateIcon date={newsDate} />
+
               {/* News views  */}
               <p className="flex flex-row items-baseline gap-x-2 text-sm">
                 {/* Icon  */}
                 <FaRegEye className="text-info" />
 
                 {/* text  */}
-                <span className="text-secondary">236</span>
+                <span className="text-secondary">{views}</span>
               </p>
             </div>
 
@@ -66,7 +65,7 @@ export default function NewsCardExtended({
 
           {/* Card description */}
           <p className="mb-3 mt-4 line-clamp-3 font-normal leading-8 text-gray-700 dark:text-gray-400">
-            {body}
+            {newsBodyText}
           </p>
           {/* End description */}
         </div>

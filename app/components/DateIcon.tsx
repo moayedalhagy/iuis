@@ -1,4 +1,4 @@
-import { FaRegCalendarDays, FaShareNodes } from "react-icons/fa6";
+import { FaRegCalendarDays } from "react-icons/fa6";
 export default function DateIcon({ date }: { date: string }) {
   return (
     <p className="me-4 flex flex-row items-baseline gap-x-2 text-sm">
