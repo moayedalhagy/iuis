@@ -9,7 +9,7 @@ export default async function NewsKeywords() {
       {keywords.map((item, index) => (
         <Link
           key={`news-keyword-${index}`}
-          href="#"
+          href={`/news?keyword=${item.keyword}`}
           className="text-nowrap rounded-[19px] bg-neutral-100 px-1 py-1 text-center text-[#9c9c9c] last:odd:col-span-2 hover:bg-neutral-200"
         >
           {item.keyword}

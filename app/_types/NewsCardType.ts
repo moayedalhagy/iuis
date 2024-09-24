@@ -1,3 +1,9 @@
+type imageNewsType = {
+  imageVedioId: number;
+  linkType: number;
+  link: string;
+};
+
 export type NewsCardType = {
   newsId?: number;
   cardImageLink: string;
@@ -12,6 +18,7 @@ export type NewsCardType = {
   newsCategoryName?: string;
   class?: string;
   hideShareIcon?: boolean;
+  imageNews?: Array<imageNewsType>;
 };
 
 export type NewsCategoriesType = Pick<

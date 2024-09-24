@@ -16,9 +16,20 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function News() {
+type Params = {
+  keyword?: string;
+};
+export default async function News({
+  params,
+  searchParams,
+}: {
+  params?: { slug: string };
+  searchParams: Params;
+}) {
   const t = await getTranslations("NewsPage");
-  const NewsData: Array<NewsCardType> = await getNews();
+
+  const NewsData: Array<NewsCardType> = await getNews(searchParams.keyword);
+
   return (
     <main className="bg-neutral-100">
       <HeroImage image={"/images/sho3ib.webp"} title={"الأخبار"} />

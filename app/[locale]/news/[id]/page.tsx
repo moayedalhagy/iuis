@@ -9,7 +9,6 @@ import Image from "next/image";
 import NewsItem from "@/app/components/News/NewsItem";
 import { NewsCardType } from "@/app/_types/NewsCardType";
 import getSingleNews from "@/app/_actions/SingleNews";
-import getNews from "@/app/_actions/news";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("NewsPage");
@@ -25,8 +24,11 @@ export default async function SingleNews({
 }) {
   const t = await getTranslations("NewsPage");
 
-  const singleNewsData: NewsCardType = await getSingleNews(params.id);
-  const linkedNewsData: Array<NewsCardType> = await getNews();
+  const NewsData = await getSingleNews(params.id);
+
+  const singleNewsData: NewsCardType = NewsData.cardsNews;
+
+  const linkedNewsData: Array<NewsCardType> = NewsData.relatedNews;
 
   return (
     <main className="bg-neutral-100">
@@ -53,16 +55,28 @@ export default async function SingleNews({
               <div className="div">
                 <p className="text-2xl text-success">{t("related_media")}</p>
                 <div className="mt-3 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
-                  {[1, 2, 3, 4, 5].map((item, index) => (
+                  {singleNewsData.imageNews?.map((item, index) => (
+                    // "/images/temp/big-card.png"
                     <div className="rounded-xl">
-                      <Image
-                        src={"/images/temp/big-card.png"}
-                        alt="kk"
-                        layout="responsive"
-                        width={"50"}
-                        height={"50"}
-                        className="rounded-xl"
-                      />
+                      {item.linkType == 1 ? (
+                        // <Image
+                        //   src={item.link}
+                        //   alt="news media"
+                        //   layout="responsive"
+                        //   width={"50"}
+                        //   height={"50"}
+                        //   className="rounded-xl"
+                        // />
+                        <p>image</p>
+                      ) : (
+                        <iframe
+                          className="h-full w-full rounded-xl border-0 outline-0"
+                          src="https://www.youtube.com/embed/8UYy6yRttYw"
+                          // src={videoData[0].videoUrl}
+
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        ></iframe>
+                      )}
                     </div>
                   ))}
                 </div>

@@ -2,7 +2,10 @@
 
 import { NewsCardType } from "../_types/NewsCardType";
 
-export default async function getSingleNews(id: number): Promise<NewsCardType> {
+export default async function getSingleNews(id: number): Promise<{
+  cardsNews: NewsCardType;
+  relatedNews: Array<NewsCardType>;
+}> {
   const resource: string = `CardsNews/${id}`;
 
   const result = await fetch(`${process.env.API_URI}/${resource}`, {

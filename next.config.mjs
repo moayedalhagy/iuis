@@ -8,17 +8,17 @@ const nextConfig = {
         API_URI: process.env.API_URI
     },
     images : {
-       domains : ['picsum.photos'],
-        // remotePatterns : [
-        //     {
-        //       protocol: 'https',
-        //       hostname: 'api.iuis.university',                      
-        //     },
-        //     {
-        //       protocol: 'https',
-        //       hostname: 'picsum.photos',              
-        //     },
-        //   ],
+        // domains : ['picsum.photos','placehold.co','shutterstock.com'],
+        remotePatterns: [
+            {
+              protocol: 'https',
+              hostname: '**',
+            },
+            {
+              protocol: 'http',
+              hostname: '**',
+            },
+          ],
     }
     
 };
