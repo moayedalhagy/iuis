@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import Info from "./Footer/Info";
 
 import dynamic from "next/dynamic";

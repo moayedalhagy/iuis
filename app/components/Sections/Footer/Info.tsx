@@ -1,4 +1,8 @@
+"use client";
+
+import getFooterSocials from "@/app/_actions/FooterSocials";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import {
   FaFacebook,
   FaInstagram,
@@ -23,9 +27,20 @@ import {
 // ];
 
 export default function Info() {
+  // const NewsData: Array<any> = await getFooterSocials();
+  const [socialLinks, setSocialLinks]: any = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      setSocialLinks(await getFooterSocials());
+    }
+
+    fetchData();
+  }, []);
+
   return (
-    <div className="text-white  overflow-hidden w-full">
-      <div className="    lg:ml-20 p-2 pl-8 flex flex-row border-b-2 border-b-success">
+    <div className="w-full overflow-hidden text-white">
+      <div className="flex flex-row border-b-2 border-b-success p-2 pl-8 lg:ml-20">
         <Image
           src={"/images/logo.svg"}
           width={"120"}
@@ -33,9 +48,9 @@ export default function Info() {
           alt="ok"
           className="mb-2"
         />
-        <div className="mx-2 flex-1   flex flex-col justify-end ">
-          <div className="flex flex-col justify-between border-r-2 border-r-success    gap-y-1   pr-2 mr-1 mb-2">
-            <p className=" text-sm md:text-lg lg:text-lg   pl-10 w-auto">
+        <div className="mx-2 flex flex-1 flex-col justify-end">
+          <div className="mb-2 mr-1 flex flex-col justify-between gap-y-1 border-r-2 border-r-success pr-2">
+            <p className="w-auto pl-10 text-sm md:text-lg lg:text-lg">
               <span className="inline-block md:hidden">
                 نحو علـمٍ متميـزٍ رصيـن
               </span>
@@ -43,30 +58,30 @@ export default function Info() {
                 نحو علمٍ متميزٍ رصين
               </span>
             </p>
-            <div className="flex flex-row gap-x-2 mt-2">
+            <div className="mt-2 flex flex-row gap-x-2">
               <a
                 href="https://www.facebook.com/profile.php?id=61565416586068&mibextid=LQQJ4d"
                 target="_blank"
               >
-                <FaFacebook className="hover:text-info size-4 md:size-5 cursor-pointer" />
+                <FaFacebook className="size-4 cursor-pointer hover:text-info md:size-5" />
               </a>
               <a href="" target="_blank">
-                <FaInstagram className="hover:text-info size-4  md:size-5 cursor-pointer" />
+                <FaInstagram className="size-4 cursor-pointer hover:text-info md:size-5" />
               </a>
               <a href="https://youtube.com/@islamic_u1446?si=OAX-MtlGi68bC31o">
-                <FaYoutube className="hover:text-info size-4  md:size-5 cursor-pointer" />
+                <FaYoutube className="size-4 cursor-pointer hover:text-info md:size-5" />
               </a>
               <a
                 href="https://x.com/iuis_1446?t=c-oKvqP5u5tKeoDJrdt5OQ&s=09"
                 target="_blank"
               >
-                <FaTwitter className="hover:text-info size-4 md:size-5 cursor-pointer" />
+                <FaTwitter className="size-4 cursor-pointer hover:text-info md:size-5" />
               </a>
               <a href="" target="_blank">
-                <FaWhatsapp className="hover:text-info size-4 md:size-5 cursor-pointer" />
+                <FaWhatsapp className="size-4 cursor-pointer hover:text-info md:size-5" />
               </a>
               <a href="https://t.me/iuis_1446" target="_blank">
-                <FaTelegram className="hover:text-info size-4 md:size-5 cursor-pointer" />
+                <FaTelegram className="size-4 cursor-pointer hover:text-info md:size-5" />
               </a>
             </div>
           </div>
