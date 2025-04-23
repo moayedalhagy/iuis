@@ -14,11 +14,13 @@ export default async function getSingleNews(id: number): Promise<{
     },
   });
 
-  if (!result.ok) {
-    throw new Error("error in api");
+  if (result.ok) {
+    const response = await result.json();
+
+    return response;
+  } else if (!result.ok && result.status == 404) {
+    throw new Error("no data exists");
+  } else {
+    throw new Error("unhandled exception");
   }
-
-  const response = await result.json();
-
-  return response;
 }

@@ -31,7 +31,8 @@ export default async function NewsVerticalSection({
             <div key={`news-item-${index}`}>
               <NewsItem
                 newsId={item.newsId}
-                cardImageLink={item.cardImageLink}
+                // cardImageLink={item.cardImageLink}
+                cardImageLink={"https://placehold.co/600x400"}
                 newsDate={item.newsDate}
                 newsTime={item.newsTime}
                 title={item.title}

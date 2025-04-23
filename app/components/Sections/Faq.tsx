@@ -13,7 +13,7 @@ export default async function Faq() {
 
       <div className="py-1">
         {/* Faq Accordion component  */}
-        <FaqAccordion data={faqData} />
+        <FaqAccordion data={faqData.data} />
         {/* End Faq Accordion component  */}
       </div>
     </div>

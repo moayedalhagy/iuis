@@ -4,6 +4,11 @@ import Link from "next/link";
 
 export default async function NewsCatgoriesList() {
   const categoriesData: Array<NewsCategoriesType> = await getNewsCategories();
+
+  if (!Array.isArray(categoriesData)) {
+    return <p>لا يوجد بيانات حتى هذه اللحظة.</p>;
+  }
+
   return (
     <div className="mt-4 overflow-hidden px-4">
       <ul className="list-disc space-y-4 text-primary">

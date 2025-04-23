@@ -4,6 +4,10 @@ import Link from "next/link";
 
 export default async function NewsKeywords() {
   const keywords: Array<NewsKeywordsType> = await getNewsKeywords();
+  if (!Array.isArray(keywords)) {
+    return <p>لا يوجد بيانات حتى هذه اللحظة.</p>;
+  }
+
   return (
     <div className="keywords-list mt-4 grid grid-cols-2 grid-rows-3 gap-2 gap-y-4 p-3">
       {keywords.map((item, index) => (

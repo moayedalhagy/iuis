@@ -33,6 +33,10 @@ export default async function Decisions({
 
   const decisionData: Array<DecisionsTypes> = await getDecisions();
 
+  if (!Array.isArray(decisionData)) {
+    return <p>لا يوجد بيانات حتى هذه اللحظة.</p>;
+  }
+
   return (
     <main className="bg-neutral-100 pb-10">
       <HeroImage image={"/images/sho3ib.webp"} title={"الأنظمة والقرارات"} />

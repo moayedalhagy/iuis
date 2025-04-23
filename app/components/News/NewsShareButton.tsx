@@ -35,8 +35,6 @@ export default function NewsShareButton({ resource }: { resource: string }) {
         tempTextArea.select();
         tempTextArea.setSelectionRange(0, 99999);
 
-        console.log(document.execCommand("copy"));
-
         tempTextArea.remove();
       }
     }

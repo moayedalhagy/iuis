@@ -28,8 +28,12 @@ export default async function News({
 }) {
   const t = await getTranslations("NewsPage");
 
-  const NewsData: Array<NewsCardType> = await getNews(searchParams.keyword);
+  const apiResponse: any = await getNews(searchParams.keyword);
+  const NewsData: Array<NewsCardType> = apiResponse.data.data;
 
+  if (!Array.isArray(NewsData)) {
+    return <p>لا يوجد بيانات حتى هذه اللحظة.</p>;
+  }
   return (
     <main className="bg-neutral-100">
       <HeroImage image={"/images/sho3ib.webp"} title={"الأخبار"} />
@@ -49,7 +53,8 @@ export default async function News({
                   <NewsCard
                     title={card.title}
                     newsDate={`${card.newsDate} : ${card.newsTime}`}
-                    cardImageLink={`${card.cardImageLink}`}
+                    // cardImageLink={`${card.cardImageLink}`}
+                    cardImageLink={"https://placehold.co/600x400"}
                     newsLink={`news/${card.newsId}`}
                     newsBodyText={card.newsBodyText}
                     views={card.views}

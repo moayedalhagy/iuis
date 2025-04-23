@@ -41,6 +41,7 @@ const latestNews: Array<any> = [
 
 export default async function LatestNews() {
   const cardsNewsData: Array<NewsCardType> = await getNews();
+  // const cardsNewsData: Array<NewsCardType> = latestNews;
 
   return (
     <div className="mb-3 mt-6 bg-[#F5F5F5] px-5 pb-3 pt-7 md:px-12">

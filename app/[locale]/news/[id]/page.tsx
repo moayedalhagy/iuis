@@ -9,9 +9,11 @@ import Image from "next/image";
 import NewsItem from "@/app/components/News/NewsItem";
 import { NewsCardType } from "@/app/_types/NewsCardType";
 import getSingleNews from "@/app/_actions/SingleNews";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("NewsPage");
+
   return {
     title: t("title"),
   };
@@ -24,11 +26,14 @@ export default async function SingleNews({
 }) {
   const t = await getTranslations("NewsPage");
 
-  const NewsData = await getSingleNews(params.id);
+  const NewsData: any = await getSingleNews(params.id);
+  console.log(NewsData);
+  if (NewsData.statusCode == 404) {
+    return "لم يتم العثور على هذا الخبر";
+  }
+  const singleNewsData: NewsCardType = NewsData.data.cardsNews;
 
-  const singleNewsData: NewsCardType = NewsData.cardsNews;
-
-  const linkedNewsData: Array<NewsCardType> = NewsData.relatedNews;
+  const linkedNewsData: Array<NewsCardType> = NewsData.data.relatedNews;
 
   return (
     <main className="bg-neutral-100">
@@ -45,7 +50,8 @@ export default async function SingleNews({
                 title={singleNewsData.title}
                 newsBodyText={singleNewsData.newsBodyText}
                 newsDate={`${singleNewsData.newsDate} : ${singleNewsData.newsTime}`}
-                cardImageLink={singleNewsData.cardImageLink}
+                cardImageLink={"https://placehold.co/600x400"}
+                // cardImageLink={singleNewsData.cardImageLink}
                 views={singleNewsData.views}
               />
 
@@ -87,17 +93,19 @@ export default async function SingleNews({
               <div className="related-news p-1">
                 <p className="text-2xl text-success">{t("related_news")}</p>
                 <div className="mt-3 flex flex-col gap-y-5 md:flex-row md:gap-x-5 md:gap-y-0">
-                  {linkedNewsData.slice(0, 5).map((item, index) => (
-                    <div key={`news-item-${index}`}>
-                      <NewsItem
-                        newsId={item.newsId}
-                        cardImageLink={item.cardImageLink}
-                        newsDate={item.newsDate}
-                        newsTime={item.newsTime}
-                        title={item.title}
-                      />
-                    </div>
-                  ))}
+                  {Array.isArray(linkedNewsData)
+                    ? linkedNewsData.slice(0, 5).map((item, index) => (
+                        <div key={`news-item-${index}`}>
+                          <NewsItem
+                            newsId={item.newsId}
+                            cardImageLink={item.cardImageLink}
+                            newsDate={item.newsDate}
+                            newsTime={item.newsTime}
+                            title={item.title}
+                          />
+                        </div>
+                      ))
+                    : "no data"}
                 </div>
               </div>
             </div>

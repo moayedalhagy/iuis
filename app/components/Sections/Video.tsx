@@ -3,7 +3,7 @@ import SectionTitle from "../SectionTitle";
 import { IntroVideoType } from "@/app/_types/IntroVideoType";
 export default async function Video() {
   const videoData: Array<IntroVideoType> = await getIntroductoryVideos();
-  console.log(videoData);
+
   return (
     <div className="mt-6 bg-white px-5 pt-7 md:px-12">
       {/* title  */}

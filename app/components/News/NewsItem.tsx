@@ -14,7 +14,7 @@ export default function NewsItem({
       <div className="card-item mt-1 flex flex-row">
         <div className="relative h-20 w-[140px] max-w-[140px] rounded-xl">
           <Image
-            src={`${cardImageLink}`}
+            src={`${cardImageLink} `}
             alt={`${title}`}
             fill={true}
             className="rounded-xl object-cover"

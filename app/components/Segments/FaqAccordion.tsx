@@ -37,9 +37,14 @@ export default function FaqAccordion({
 
   const buttonClass =
     "question-btn flex w-full items-start justify-between gap-x-5 rounded-tr-lg rounded-tl-lg  p-1  py-3.5 lg:py-4 text-lg font-bold text-slate-800 focus:outline-none ltr:text-left rtl:text-right";
+
+  if (!Array.isArray(data)) {
+    return <p>No FAQ data provided.</p>;
+  }
   return (
     <div className="rounded-lg">
       {/* item  */}
+
       {data.map((item: FaqAccordionItemType, index: number) => {
         return (
           <div key={index} className="mt-6 border-b border-[#0A071B]/10">
