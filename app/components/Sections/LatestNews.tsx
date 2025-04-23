@@ -48,7 +48,7 @@ export default async function LatestNews() {
       {/* title  */}
       <SectionTitle text={"آخر الأخبار"} />
       <div className="mt-5 grid grid-cols-1 justify-center gap-y-4 md:grid-cols-2 md:gap-x-2 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-0 lg:px-20">
-        {cardsNewsData.slice(0, 3).map((card) => {
+        {cardsNewsData.map((card) => {
           return (
             <div key={card.newsId} className={`${card.class} shrink-1`}>
               <NewsCard

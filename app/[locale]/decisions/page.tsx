@@ -43,7 +43,7 @@ export default async function Decisions({
       <div className="px-5 pt-7 md:px-12">
         <div className="contentx flex flex-row lg:gap-x-10">
           {/* vertical section  */}
-          <DecisionsVerticalSection data={decisionData.slice(0, 5)} />
+          <DecisionsVerticalSection data={decisionData} />
 
           {/* cards section  */}
           <div className="card-section flex-1 overflow-hidden rounded-lg bg-white px-3 pt-7">

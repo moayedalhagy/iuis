@@ -94,7 +94,7 @@ export default async function SingleNews({
                 <p className="text-2xl text-success">{t("related_news")}</p>
                 <div className="mt-3 flex flex-col gap-y-5 md:flex-row md:gap-x-5 md:gap-y-0">
                   {Array.isArray(linkedNewsData)
-                    ? linkedNewsData.slice(0, 5).map((item, index) => (
+                    ? linkedNewsData.map((item, index) => (
                         <div key={`news-item-${index}`}>
                           <NewsItem
                             newsId={item.newsId}

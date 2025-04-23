@@ -40,7 +40,7 @@ export default async function News({
       <div className="px-5 pt-7 md:px-12">
         <div className="contentx flex flex-row lg:gap-x-10">
           {/* vertical section  */}
-          <NewsVerticalSection data={NewsData.slice(0, 5)} />
+          <NewsVerticalSection data={NewsData} />
 
           {/* cards section  */}
           <div className="card-section flex-1 overflow-hidden rounded-lg bg-white px-3 pt-7">
